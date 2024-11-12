@@ -8,9 +8,10 @@ Personal memo of action to adapt the boiler plate to a new project:
 - [ ] rename `ExamplePlugin`
 - [ ] set `PLUGIN_CODE`
 - [ ] set `AU_MAIN_TYPE`
-- [ ] set the 
+
 `/CMakeLists.txt`
 - [ ] rename `JUCE_EXAMPLE`
+
 `src/PluginEditor.h`
 - [ ] rename `TestpluginAudioProcessorEditor`
 
