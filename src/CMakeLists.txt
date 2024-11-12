@@ -25,7 +25,7 @@ juce_add_plugin(ExamplePlugin
     # EDITOR_WANTS_KEYBOARD_FOCUS TRUE/FALSE    # Does the editor need keyboard focus?
     COPY_PLUGIN_AFTER_BUILD TRUE        # Should the plugin be installed to a default location after building?
     PLUGIN_MANUFACTURER_CODE Noia               # A four-character manufacturer id with at least one upper-case character
-    PLUGIN_CODE XXXX                            # A unique four-character plugin id with at least one upper-case character
+    PLUGIN_CODE Phil                            # A unique four-character plugin id with at least one upper-case character
     FORMATS 
     # The formats to build. Other valid formats are: AAX Unity VST AU AUv3
             Standalone 

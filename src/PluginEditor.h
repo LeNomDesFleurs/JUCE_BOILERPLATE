@@ -16,11 +16,11 @@
 //==============================================================================
 /**
  */
-class TestpluginAudioProcessorEditor : public juce::AudioProcessorEditor {
+class TestpluginAudioProcessorEditor : public juce::AudioProcessorEditor, public juce::Timer {
  public:
   TestpluginAudioProcessorEditor(TestpluginAudioProcessor &);
   ~TestpluginAudioProcessorEditor() override;
-
+void timerCallback() override;
   //==============================================================================
   void paint(juce::Graphics &) override;
   void resized() override;

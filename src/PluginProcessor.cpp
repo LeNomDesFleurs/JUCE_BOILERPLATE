@@ -147,7 +147,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout layout;
   using FloatParam = juce::AudioParameterFloat;
 
   layout.add(std::make_unique<FloatParam>(
-      "dry_wet", "dry_wet", FloatRange(0.f, 1.f, 0.01f, 1.f), 1.f));
+      "dry_wet", "Dry-Wet", FloatRange(0.f, 1.f, 0.01f, 1.f), 1.f));
   return layout;
 }
 
