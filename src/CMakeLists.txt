@@ -14,17 +14,17 @@ juce_add_plugin(ExamplePlugin
     # VERSION ...                                     # Set this if the plugin version is different to the project version
     # ICON_BIG ""   # ICON_* arguments specify a path to an image file to use as an icon for the Standalone
     #   ICON_SMALL "${CMAKE_SOURCE_DIR}/Assets/icon16.png " 
-    COMPANY_NAME "Tomoya Matsuura"                    # Specify the name of the plugin's author
-    COMPANY_COPYRIGHT "Tomoya Matsuura"
-    COMPANY_WEBSITE "https://matsuuratomoya.com/"
-    COMPANY_EMAIL "me@matsuuratomoya.com"
+    COMPANY_NAME "NOI"                    # Specify the name of the plugin's author
+    COMPANY_COPYRIGHT "Thomas Guillory"
+    COMPANY_WEBSITE "https://lndf.fr"
+    COMPANY_EMAIL "thomasvguillory@gmail.com"
     IS_SYNTH FALSE                       # Is this a synth or an effect?
     # NEEDS_MIDI_INPUT TRUE/FALSE               # Does the plugin need midi input?
     # NEEDS_MIDI_OUTPUT TRUE/FALSE              # Does the plugin need midi output?
     # IS_MIDI_EFFECT TRUE/FALSE                 # Is this plugin a MIDI effect?
     # EDITOR_WANTS_KEYBOARD_FOCUS TRUE/FALSE    # Does the editor need keyboard focus?
-    # COPY_PLUGIN_AFTER_BUILD TRUE/FALSE        # Should the plugin be installed to a default location after building?
-    PLUGIN_MANUFACTURER_CODE CCCC               # A four-character manufacturer id with at least one upper-case character
+    COPY_PLUGIN_AFTER_BUILD TRUE        # Should the plugin be installed to a default location after building?
+    PLUGIN_MANUFACTURER_CODE Noia               # A four-character manufacturer id with at least one upper-case character
     PLUGIN_CODE XXXX                            # A unique four-character plugin id with at least one upper-case character
     FORMATS 
     # The formats to build. Other valid formats are: AAX Unity VST AU AUv3
@@ -63,8 +63,12 @@ target_compile_definitions(ExamplePlugin
 juce_add_binary_data(JuceLogoBinary
 SOURCES 
 ${CMAKE_SOURCE_DIR}/assets/juce-logo.svg
+${CMAKE_SOURCE_DIR}/assets/NOI.svg
 )
 
+
+file(GLOB_RECURSE SourceFiles CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp") #"${CMAKE_CURRENT_SOURCE_DIR}/*.h")
+target_sources(ExamplePlugin PRIVATE ${SourceFiles})
 target_sources(ExamplePlugin PRIVATE
     PluginEditor.cpp
     PluginProcessor.cpp
