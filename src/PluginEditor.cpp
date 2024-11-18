@@ -44,6 +44,4 @@ void TestpluginAudioProcessorEditor::resized() {
   // subcomponents in your editor..
 }
 
-void TestpluginAudioProcessorEditor::timerCallback(){
-  
-}
+void TestpluginAudioProcessorEditor::timerCallback() { repaint(); }

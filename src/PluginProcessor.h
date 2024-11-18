@@ -55,7 +55,9 @@ class TestpluginAudioProcessor : public juce::AudioProcessor {
 
    juce::AudioProcessorValueTreeState apvts{*this, nullptr, "Parameters",
                                            createParameterLayout()};
+    noi::XXXX::Parameters getParameters();
  private:
   //==============================================================================
   JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(TestpluginAudioProcessor)
+  noi::XXXX xxxx;
 };

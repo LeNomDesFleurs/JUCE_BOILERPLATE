@@ -2,17 +2,20 @@
 
 Boiler plate from [here](https://github.com/tomoyanonymous/juce_cmake_vscode_example) with some additional personal stuff (save state, logo, etc.)
 
-Personal memo of action to adapt the boiler plate to a new project:
+Personal memo of actions to adapt the boiler plate to a new project:
 
 `src/CMakeLists.txt`
 - [ ] rename `ExamplePlugin`
 - [ ] set `PLUGIN_CODE`
 - [ ] set `AU_MAIN_TYPE`
-- [ ] set the 
 `/CMakeLists.txt`
 - [ ] rename `JUCE_EXAMPLE`
 `src/PluginEditor.h`
 - [ ] rename `TestpluginAudioProcessorEditor`
+`src/PluginProcessor.h`
+- [ ] rename `TestpluginAudioProcessor`
+- [ ] rename `XXXX` & `xxxx`
+
 
 copy of the original readme :
 

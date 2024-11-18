@@ -118,6 +118,8 @@ void TestpluginAudioProcessor::processBlock(juce::AudioBuffer<float> &buffer,
   auto totalNumInputChannels = getTotalNumInputChannels();
   auto totalNumOutputChannels = getTotalNumOutputChannels();
 
+  xxxx.setParameters(getSettings());
+
   // In case we have more outputs than inputs, this code clears any output
   // channels that didn't contain input data, (because these aren't
   // guaranteed to be empty - they may contain garbage).
@@ -139,6 +141,15 @@ void TestpluginAudioProcessor::processBlock(juce::AudioBuffer<float> &buffer,
     // ..do something to the data...
   }
 }
+
+noi::XXXX::Parameters LianaAudioProcessor::getParameters() {
+  noi::XXXX::Parameters settings;
+  // use bit shifting (2^) to get the fftsize
+  settings.dry_wet = apvts.getRawParameterValue("dry_wet")->load();
+ 
+  return settings;
+}
+
 
 juce::AudioProcessorValueTreeState::ParameterLayout TestpluginAudioProcessor::createParameterLayout(){
 juce::AudioProcessorValueTreeState::ParameterLayout layout;
