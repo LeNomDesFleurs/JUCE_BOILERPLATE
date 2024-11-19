@@ -11,7 +11,7 @@
 #include <JuceHeader.h>
 
 #include "PluginProcessor.h"
-
+#include "WipLookAndFeel.h"
 
 //==============================================================================
 /**
@@ -26,6 +26,8 @@ void timerCallback() override;
   void resized() override;
 
  private:
+  EmptyKnob empty_knob_lf;
+  PlaceHolder place_holder_lf;
   // This reference is provided as a quick way for your editor to
   // access the processor object that created it.
   TestpluginAudioProcessor &audioProcessor;
