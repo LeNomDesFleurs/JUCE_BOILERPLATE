@@ -18,7 +18,8 @@
  */
 class TestpluginAudioProcessorEditor : public juce::AudioProcessorEditor, public juce::Timer {
  public:
-  TestpluginAudioProcessorEditor(TestpluginAudioProcessor &);
+
+  TestpluginAudioProcessorEditor(TestpluginAudioProcessor &p);
   ~TestpluginAudioProcessorEditor() override;
 void timerCallback() override;
   //==============================================================================

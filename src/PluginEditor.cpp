@@ -20,6 +20,10 @@ TestpluginAudioProcessorEditor::TestpluginAudioProcessorEditor(
   // load Image from BinaryData
   svgimg = juce::Drawable::createFromImageData(BinaryData::jucelogo_svg,
                                                BinaryData::jucelogo_svgSize);
+
+  using Attachment = juce::AudioProcessorValueTreeState::SliderAttachment;
+  DryWetAttachement.reset(new Attachment(p.apvts, "dry_wet", DryWetSlider));
+                                          
     for (auto* comp : getComps()) {
     addAndMakeVisible(comp);
     comp->setLookAndFeel(&empty_knob_lf);
