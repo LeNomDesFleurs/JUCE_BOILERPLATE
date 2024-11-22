@@ -20,6 +20,14 @@ TestpluginAudioProcessorEditor::TestpluginAudioProcessorEditor(
   // load Image from BinaryData
   svgimg = juce::Drawable::createFromImageData(BinaryData::jucelogo_svg,
                                                BinaryData::jucelogo_svgSize);
+    for (auto* comp : getComps()) {
+    addAndMakeVisible(comp);
+    comp->setLookAndFeel(&empty_knob_lf);
+    // comp->setLookAndFeel(&placeHolderLookAndFeel);
+    comp->setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
+    comp->setTextBoxStyle(juce::Slider::NoTextBox, false, 0,
+                          comp->getTextBoxHeight());
+  }
 }
 
 TestpluginAudioProcessorEditor::~TestpluginAudioProcessorEditor() {}
@@ -37,7 +45,13 @@ void TestpluginAudioProcessorEditor::paint(juce::Graphics &g) {
   g.setFont(30.0f);
   g.drawFittedText("Hello World!", getLocalBounds(),
                    juce::Justification::centred, 1);
+
+
 }
+
+std::vector<juce::Slider> TestpluginAudioProcessorEditor::getComps() { return {
+  &DryWetSlider
+  }; }
 
 void TestpluginAudioProcessorEditor::resized() {
   // This is generally where you'll want to lay out the positions of any
