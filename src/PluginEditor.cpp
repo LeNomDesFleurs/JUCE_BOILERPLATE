@@ -49,7 +49,7 @@ void TestpluginAudioProcessorEditor::paint(juce::Graphics &g) {
 
 }
 
-std::vector<juce::Slider> TestpluginAudioProcessorEditor::getComps() { return {
+std::vector<juce::Slider*> TestpluginAudioProcessorEditor::getComps() { return {
   &DryWetSlider
   }; }
 

@@ -24,7 +24,7 @@ void timerCallback() override;
   //==============================================================================
   void paint(juce::Graphics &) override;
   void resized() override;
-  std::vector<juce::Slider> getComps();
+  std::vector<juce::Slider*> getComps();
 
  private:
   EmptyKnob empty_knob_lf;
